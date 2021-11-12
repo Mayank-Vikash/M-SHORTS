@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>M SHORTS (Mayank's Shorts) | Mayank Vikash</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1,  user-scalable=0">
-<meta name="title" content="M SHORTS | Mayank Vikash">
-<meta name="description" content="M SHORTS is a free short video sharing platform, developed by Mayank Vikash">
-<meta name="keywords" content="Mayank Vikash, M SHORTS, Mayank, Vikash, Indian Developer, Short Video Platform, Mayank's Shorts">
-<meta name="robots" content="index, follow">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="language" content="English">
-<meta name="revisit-after" content="1 days">
-<meta name="author" content="Mayank Vikash">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://m-shorts.mayankvikash.ml/">
-<meta property="og:title" content="M SHORTS | Mayank Vikash">
-<meta property="og:description" content="M SHORTS is a free short video sharing platform, developed by Mayank Vikash">
-<meta property="og:image" content="https://m-shorts.mayankvikash.ml/MSHORTS-FACEBOOK-OG-IMAGE.png">
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://m-shorts.mayankvikash.ml">
-<meta property="twitter:title" content="M SHORTS | Mayank Vikash">
-<meta property="twitter:description" content="M SHORTS is a free short video sharing platform, developed by Mayank Vikash">
-<style>
+    <title>M SHORTS | Mayank Vikash</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,  user-scalable=0">
+    <meta name="title" content="M SHORTS | Mayank Vikash">
+    <meta name="description" content="M SHORTS is a free short video sharing platform, developed by Mayank Vikash">
+    <meta name="revisit-after" content="1 days">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://m-shorts.mayankvikash.ml/">
+    <meta property="og:title" content="M SHORTS | Mayank Vikash">
+    <meta property="og:description" content="M SHORTS is a free short video sharing platform, developed by Mayank Vikash">
+    <meta property="og:image" content="https://m-shorts.mayankvikash.ml/MSHORTS-FACEBOOK-OG-IMAGE.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://m-shorts.mayankvikash.ml">
+    <meta property="twitter:title" content="M SHORTS | Mayank Vikash">
+    <meta property="twitter:description" content="M SHORTS is a free short video sharing platform, developed by Mayank Vikash">
+
+    <!-- Video JS -->
+    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/dire-wolf');
         * {
             padding: 0;
             margin: 0;
@@ -29,667 +31,612 @@
             color: #fff;
             scroll-behavior: smooth;
         }
-        
+
         html {
-            font-size: 100%;
-            background-color: #000;
-        }
-        
-        nav {
-            position: absolute;
-            height: 3rem;
-            top: 0;
-            width: 100%;
-            background: #000;
-            z-index: 1;
-            overflow: hidden;
-        }
-        
-        #logo {
-            position: absolute;
-            background: transparent;
-            overflow: hidden;
-            color: #000;
-            border-style: solid;
-            border-width: 2px;
-            border-color: #000;
-        }
-        
-        #logo1 {
-            position: fixed;
-            display: inline-block;
-            white-space: nowrap;
-            padding-top: 10px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: #fff;
-            right: 1%;
-            vertical-align: center;
+            background: #2b2b2b;
         }
-        
-        .content {
+
+        nav {
+            position: relative;
+            background: #000;
+            width: 100%;
+            height: 28px;
+        }
+
+        #nav-image-logo {
+            background: transparent;
+            position: relative;
+            height: 100px;
+            width: 100px;
+        }
+
+        #nav-text-logo {
+            background: transparent;
+            position: absolute;
+            display: inline-block;
+            right: 1px;
+            padding-top: 8px;
+        }
+
+        .container {
+            position: absolute;
+            width: 100%;
+            /* background: #2b2b2b; */
+            background-image: url("https://cdn.pixabay.com/photo/2019/10/24/02/18/halloween-4573176_960_720.jpg");
+            background-repeat: repeat;
+
+            float: left;
+            width: 100%;
+        }
+
+        #my-video {
+            display: block;
+            margin: 0 auto;
+            height: 250px;
+            width: 100%;
+        }
+
+        .veri-mark {
             position: relative;
             top: 0vh;
-            height: 2200vh;
-            width: 100%;
-            background: radial-gradient(#000, #1a1919);
+            height: 15px;
         }
-        
-        .video1 {
+
+        .trend {
             position: relative;
-            max-height: 100vh;
-            width: 100%;
+            font-size: 1rem;
         }
-        
-        #video1 {
+
+        #comment-name {
             position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
+            font-size: 1rem;
         }
-        
-        #videoTitle1 {
-            color: #fff;
+
+        .cmnt-mark {
+            top: 0vh;
             position: relative;
-            transform: translate(-50%, -50%);
-            top: 39vh;
-            left: 50%;
+            height: 14px;
         }
-        
-        #videoDescription1 {
-            color: #fff;
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
+
+        .ad-banner {
+            height: 250px;
+            width: 300px;
+            border: 1px solid #fff;
         }
-        
-        .video2 {
-            position: relative;
-            max-height: 100vh;
-            width: 100%;
-            top: 100vh;
+
+        .hcb-icon {
+            visibility: hidden;
         }
-        
-        #video2 {
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
-        }
-        
-        #videoTitle2 {
-            color: #fff;
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 39vh;
-            left: 50%;
-        }
-        
-        #videoDescription2 {
-            color: #fff;
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
-        }
-        
-        .video3 {
-            position: relative;
-            max-height: 100vh;
-            width: 100%;
-            top: 200vh;
-        }
-        
-        #video3 {
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
-        }
-        
-        #videoTitle3 {
-            color: #fff;
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 39vh;
-            left: 50%;
-        }
-        
-        #videoDescription3 {
-            color: #fff;
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
-        }
-        
-        .video4 {
-            position: relative;
-            max-height: 100vh;
-            width: 100%;
-            top: 300vh;
-        }
-        
-        #video4 {
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
-        }
-        
-        #videoTitle4 {
-            color: #fff;
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 39vh;
-            left: 50%;
-        }
-        
-        #videoDescription4 {
-            color: #fff;
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
-        }
-        
-        .video5 {
-            position: relative;
-            max-height: 100vh;
-            width: 100%;
-            top: 400vh;
-        }
-        
-        #video5 {
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
-        }
-        
-        #videoTitle5 {
-            color: #fff;
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 39vh;
-            left: 50%;
-        }
-        
-        #videoDescription5 {
-            color: #fff;
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
-        }
-        
-        .video6 {
-            position: relative;
-            max-height: 100vh;
-            width: 100%;
-            top: 500vh;
-        }
-        
-        #video6 {
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
-        }
-        
-        #videoTitle6 {
-            color: #fff;
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 39vh;
-            left: 50%;
-        }
-        
-        #videoDescription6 {
-            color: #fff;
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
-        }
-        
-        .video7 {
-            position: relative;
-            max-height: 100vh;
-            width: 100%;
-            top: 600vh;
-        }
-        
-        #video7 {
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
-        }
-        
-        #videoTitle7 {
-            color: #fff;
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 39vh;
-            left: 50%;
-        }
-        
-        #videoDescription7 {
-            color: #fff;
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
-        }
-        
-        .video8 {
-            position: relative;
-            max-height: 100vh;
-            width: 100%;
-            top: 700vh;
-        }
-        
-        #video8 {
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
-        }
-        
-        #videoTitle8 {
-            color: #fff;
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 39vh;
-            left: 50%;
-        }
-        
-        #videoDescription8 {
-            color: #fff;
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
-        }
-        
-        .video9 {
-            position: relative;
-            max-height: 100vh;
-            width: 100%;
-            top: 800vh;
-        }
-        
-        #video9 {
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
-        }
-        
-        #videoTitle9 {
-            color: #fff;
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 39vh;
-            left: 50%;
-        }
-        
-        #videoDescription9 {
-            color: #fff;
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
-        }
-        
-        .video10 {
-            position: relative;
-            max-height: 100vh;
-            width: 100%;
-            top: 900vh;
-        }
-        
-        #video10 {
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
-        }
-        
-        #videoTitle10 {
-            color: #fff;
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 39vh;
-            left: 50%;
-        }
-        
-        #videoDescription10 {
-            color: #fff;
-            position: relative;
-            transform: translate(-50%, -50%);
-            top: 50vh;
-            left: 50%;
-        }
-        
-        .footer {
-            position: absolute;
-            top: 1900vh;
-        }
-        
-        nav {
-            position: fixed;
-            height: 3rem;
-            width: 100%;
-            background: linear-gradient(#000, #030202);
-        }
-        
-        #logo {
-            background: radial-gradient( #000);
-        }
-        
-        .trending {
-            position: relative;
-            top: 10vh;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-        
-        button {
-            position: relative;
-            color: #000;
-        }
-        
-        .copylink {
-            position: releative;
-            top: 50vh;
-        }
-        
-        .p1 {
-            position: relative;
-            top: 50.2vh;
-        }
-        
-        #loader {
-            background: #1b1b1b;
-            z-index: 100;
-            height: 100vh;
-            width: 100%;
-            position: fixed;
-        }
-        
-        #loderheader {
-            background-size: contain;
-            width: 100%;
-            text-align: center;
-            color: transparent;
-            font-weight: 400px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            position: absolute;
-            font-size: 14vw;
-            margin: 0;
-            font-family: sans-serif;
-        }
-        
-        #loderheader::before {
-            content: attr(data-heading);
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            background: linear-gradient(45deg, rgba(255, 255, 255, 0) 45%, rgba(255, 255, 255) 50%, rgba(255, 255, 255, 0)55%, rgba(255, 255, 255, 0)100%);
-            -webkit-background-clip: text;
-            color: transparent;
-            animation: shine 2.3s infinite;
-            background-size: 200%;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1), -2px 2px 10px rgba(0, 0, 0, 0.1), -2px -2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        @keyframes shine {
-            0% {
-                background-position: -100%;
-            }
-            100% {
-                background-position: 100%;
-            }
-        }
-        
-        p {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        #ad{
-            position: relative;
-            top:50.5vh;
+
+        .home-desc {
+            visibility: hidden;
         }
     </style>
 </head>
+
 <body>
-<div id="loader">
-<div class="bgbgbg">
- <h1 data-heading="Loading" id="loderheader">Loading</h1>
-</div>
-</div>
-<nav>
-<iframe src="https://m-shorts.mayankvikash.ml/MSHORTS.png" id="logo"></iframe>
-<h3 id="logo1">Mayank Vikash</h3>
-</nav>
-<div class="content">
-<div class="video1">
-<h2 class="trending">Trending #1</h2>
-<p id="videoTitle1">Space Jam's jump effect</p>
-<iframe src="https://www.youtube.com/embed/__dCLHcD-tE" allow="autoplay" id="video1"></iframe>
-<p id="videoDescription1">Provided to M SHORTS by <b>Cinecom.net</b>
-<br> About the video: Space Jam's jump effect.
-<br> Subtitles/Captions by <b>N/A</b>
-<br> Video Type: <b>Clip/Animation</b>
-<br> Video Language: <b>English</b>
-<br> Licensed to M SHORTS by <b>N/A (non-copyrighted product or made for public domain)</b>
-<br>
-<p id="p1" class="p1">https://m-shorts.mayankvikash.ml/#video1</p>
-<button onclick="copyToClipboard('p1')" class="copylink">Copy Link</button>
-</p> <br>
+    <!-- x="50" y="90" -->
+    <nav>
 
-</div>
-<div class="video2">
-<h2 class="trending">Trending #2</h2>
-<p id="videoTitle2">"I am Bored!"</p>
-<iframe src="https://www.youtube.com/embed/__dCLHcD-tE" id="video2"></iframe>
-<p id="videoDescription2">Provided to M SHORTS by <b>RM Videos</b>
-<br> About the video: <b>Kids are really funny.</b>
-<br> Subtitles/Captions by: <b>M SHORTS</b>
-<br> Video Type: <b>Clip</b>
-<br> Video Language: <b>English</b>
-<br> Licensed to M SHORTS by <b>N/A (non-copyrighted product or made for public domain)</b>
-<br>
-<p id="p2" class="p1">https://m-shorts.mayankvikash.ml/#video2</p>
-<button onclick="copyToClipboard('p2')" class="copylink">Copy Link</button>
-</p>
-<br>
+        <iframe src="https://m-shorts.mayankvikash.ml/MSHORTS.png" id="nav-image-logo" scrolling="no" frameborder="0"></iframe>
+        <h3 id="nav-text-logo">Mayank Vikash</h3>
 
-</div>
-<div class="video3">
-<h2 class="trending">Trending #3</h2>
-<p id="videoTitle3">South Indian?</p>
-<iframe src="https://www.youtube.com/embed/__dCLHcD-tE" id="video3"></iframe>
-<p id="videoDescription3">Provided to M SHORTS by <b>Elementus</b>
-<br> About the video: <b>Trever Noah Indians vs Russian Villians Stand Up Comedy.</b>
-<br> Subtitles/Captions by: <b>M SHORTS</b>
-<br> Video Type: <b>Clip/Meme</b>
-<br> Video Language: <b>English</b>
-<br> Licensed to M SHORTS by <b>Laughter Therapy</b>
-<br>
-<p id="p3" class="p1">https://m-shorts.mayankvikash.ml/#video3</p>
-<button onclick="copyToClipboard('p3')" class="copylink">Copy Link</button></p>
-<br>
+    </nav>
+    <div class="container">
+        <div class="content">
 
-</div>
-<div class="video4">
-<h2 class="trending">4.</h2>
-<p id="videoTitle4">Riya! Riya!</p>
-<iframe src="https://www.youtube.com/embed/__dCLHcD-tE" id="video4"></iframe>
-<p id="videoDescription4">Provided to M SHORTS by <b>Mayank Vikash</b>
-<br> About the video: <b>Funny Clip</b>
-<br> Subtitles/Captions by: <b>N/A</b>
-<br> Video Type: <b>Clip/Meme</b>
-<br> Video Language: <b>Hindi</b>
-<br> Licensed to M SHORTS by <b>N/A (non-copyrighted product or made for public domain)</b>
-<br>
-<p id="p4" class="p1">https://m-shorts.mayankvikash.ml/#video4</p>
-<button onclick="copyToClipboard('p4')" class="copylink">Copy Link</button></p>
-<br>
-<p id="ad"> <script type="text/javascript" language="javascript">
-      var aax_size='300x250';
-      var aax_pubname = 'mayankvikash-21';
-      var aax_src='302';
-    </script>
-<script type="text/javascript" language="javascript" src="https://c.amazon-adsystem.com/aax2/assoc.js"></script> </p>
-</div>
-<div class="video5">
-<h2 class="trending">5.</h2>
-<p id="videoTitle5">MONSTER, MONSTER!</p>
-<iframe src="https://www.youtube.com/embed/__dCLHcD-tE" id="video5"></iframe>
-<p id="videoDescription5">Provided to M SHORTS by <b>RM Videos</b>
-<br> About the video: <b>Kids are really funny.</b>
-<br> Subtitles/Captions by: <b>M SHORTS</b>
-<br> Video Type: <b>Clip</b>
-<br> Video Language: <b>English</b>
-<br> Licensed to M SHORTS by <b>N/A (non-copyrighted product or made for public domain)</b>
-<br>
-<p id="p5" class="p1">https://m-shorts.mayankvikash.ml/#video5</p>
-<button onclick="copyToClipboard('p5')" class="copylink">Copy Link</button></p>
-<br>
+            <!-- Video 1 -->
 
-</div>
-<div class="video6">
-<h2 class="trending">6.</h2>
-<p id="videoTitle6">DYE!</p>
-<iframe src="https://www.youtube.com/embed/__dCLHcD-tE" id="video6"></iframe>
-<p id="videoDescription6">Provided to M SHORTS by <b>RM Videos</b>
-<br> About the video: <b>Cute child don't know the difference between DIE and DYE.</b>
-<br> Subtitles/Captions by: <b>M Shorts</b>
-<br> Video Type: <b>Clip</b>
-<br> Video Language: <b>English</b>
-<br> Licensed to M SHORTS by <b>N/A (non-copyrighted product or made for public domain)</b>
-<br>
-<p id="p6" class="p1">https://m-shorts.mayankvikash.ml/#video6</p>
-<button onclick="copyToClipboard('p6')" class="copylink">Copy Link</button></p>
-<br>
+            <div class="video1" id="video1">
+                <video controls id="my-video" class="video-js vjs-big-play-centered" preload="auto" data-setup="{}">
+                    <source src="https://mayankvikash.github.io/M-SHORTS-VIDEO/ElonMuskMini.mp4" type="video/mp4">
+                </video>
+                <div class="video-desc">
+                    <p class="trend">Trending #1</p>
+                    <p><b>Elon Musk</b> </p>
+                    Provided to M SHORTS by <b>[Dtbse_Err]</b>
+                    <!-- <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="veri-mark"> -->
+                    <br> About the video: [Dtbse_Err]
+                    <br> Subtitles/Captions by <b>[Dtbse_Err]</b>
+                    <br> Video Type: <b>[Dtbse_Err]</b>
+                    <br> Video Language: <b>[Dtbse_Err]</b>
+                    <br> Licensed to M SHORTS by <b>[Dtbse_Err]</b>
 
-</div>
-<div class="video7">
-<h2 class="trending">7.</h2>
-<p id="videoTitle7">Why always Selmon Bhoi</p>
-<iframe src="https://www.youtube.com/embed/__dCLHcD-tE" id="video7"></iframe>
-<p id="videoDescription7">Provided to M SHORTS by <b>Elementus</b>
-<br> About the video: <b>N/A</b>
-<br> Subtitles/Captions by <b>N/A</b>
-<br> Video Type: <b>Clip/Meme</b>
-<br> Video Language: <b>Hindi</b>
-<br> Licensed to M SHORTS by <b>N/A (non-copyrighted product or made for public domain)</b>
-<br>
-<p id="p7" class="p1">https://m-shorts.mayankvikash.ml/#video7</p>
-<button onclick="copyToClipboard('p7')" class="copylink">Copy Link</button></p>
+                    <br> Provider's Comment
+                    <br> <b>[Dtbse_Err]</b> <br>
+                    <br> Comment
+                    <p class="comment-name"> <b> M SHORTS </b> <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="cmnt-mark"></p>
+                    <p>Musk will be proud of you!</p>
 
-</div>
-<div class="video8">
-<h2 class="trending">8.</h2>
-<p id="videoTitle8">It is working.</p>
-<iframe src="https://www.youtube.com/embed/__dCLHcD-tE" id="video8"></iframe>
-<p id="videoDescription8">Provided to M SHORTS by <b>Cinecom.net</b>
-<br> About the video: <b>N/A</b>
-<br> Subtitles/Captions by: <b>N/A</b>
-<br> Video Type: <b>Clip</b>
-<br> Video Language: <b>English</b>
-<br> Licensed to M SHORTS by <b>N/A (non-copyrighted product or made for public domain)</b>
-<br>
-<p id="p8" class="p1">https://m-shorts.mayankvikash.ml/#video8</p>
-<button onclick="copyToClipboard('p8')" class="copylink">Copy Link</button></p>
 
-</div>
-<div class="video9">
-<h2 class="trending">9.</h2>
-<p id="videoTitle9">China What?</p>
-<iframe src="https://www.youtube.com/embed/__dCLHcD-tE" id="video9"></iframe>
-<p id="videoDescription9">Provided to M SHORTS by <b>Elementus</b>
-<br> About the video: What peoples of different countries are called.
-<br> Subtitles/Captions by: <b>N/A</b>
-<br> Video Type: <b>Clip/Meme</b>
-<br> Video Language: <b>Hindi</b>
-<br> Licensed to M SHORTS by: <b>N/A (non-copyrighted product or made for public domain)</b>
-<br>
-<p id="p9" class="p1">https://m-shorts.mayankvikash.ml/#video9</p>
-<button onclick="copyToClipboard('p9')" class="copylink">Copy Link</button></p>
 
-</div>
-<div class="video10">
-<h2 class="trending">10.</h2>
-<p id="videoTitle10">M SHORTS Teaser</p>
-<iframe src="https://www.youtube.com/embed/__dCLHcD-tE" id="video10"></iframe>
-<p id="videoDescription10">Provided to M SHORTS by <b>Mayank Vikash</b>
-<br> About the video: <b>M SHORTS Teaser</b>
-<br> Subtitles/Captions by: <b>N/A</b>
-<br> Video Type: <b>Clip</b>
-<br> Video Language: N/A (non-linguish content)
-<br> Licensed to M SHORTS by: <b>N/A (non-copyrighted product or made for public domain)</b>
-<br>
-<p id="p10" class="p1">https://m-shorts.mayankvikash.ml/#video10</p>
-<button onclick="copyToClipboard('p10')" class="copylink">Copy Link</button></p>
-<br>
+                    <br> <br>
 
-</div>
-<div class="footer">
-<h1>About</h1> <br>
-<p>M SHORTS ia a free short video sharing platform, developed by Mayank Vikash. Anyone can submit their videos for review, if approved it will be live on M SHORTS for 1 week.</p>
-<br> <br>
-<h1> <a href="https://m-shorts.mayankvikash.ml/Submissions/">Submit your Videos</a></h1> <br> <br>
-<p>Here are the guidelines that you must follow to get your video on M Shorts:
-<br>
-<ul>
-<li> We don't accept all videos. Make sure your video makes sense.</li> <br>
-<li> Make sure that your video is between 30 second to 2 minutes.</li> <br>
-<li>If your video is not in English you have to provide subtitles.</li> <br>
-<li> Make sure that your video doesn't contain any type of watermark.</li> <br>
-<li> You just have to submit a simple video, rest we will do.</li>
-</ul>
-<br> Note: We don't own any of the videos here, videos are either picked by us for featuring or submmited by the viewers of M SHORTS.
-<br> Give your general feedback or report video that you think violates our guidelines: <a href="/cdn-cgi/l/email-protection#8efdfbfefee1fcfacee3eff7efe0e5f8e7e5effde6a0e3e2"><span class="__cf_email__" data-cfemail="7d0e080d0d120f093d101c041c13160b14161c0e15531011">[email&#160;protected]</span></a> <br> <br>
-<p id="cr">©2021 Mayank Vikash</p>
-</p>
-</div>
-</div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        function copyToClipboard(elementId) {
+                    <div class="ad-banner">
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key': '57a25cac5277959b6e2e4de63d5a68a1',
+                                'format': 'iframe',
+                                'height': 250,
+                                'width': 300,
+                                'params': {}
+                            };
+                            document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectiveperformanceformat.com/57a25cac5277959b6e2e4de63d5a68a1/invoke.js"></scr' + 'ipt>');
+                        </script>
+                        Advertisement
 
-            // Create a "hidden" input
-            var aux = document.createElement("input");
+                    </div>
 
-            // Assign it the value of the specified element
-            aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+                </div>
+            </div>
 
-            // Append it to the body
-            document.body.appendChild(aux);
+            <br> <br>
 
-            // Highlight its content
-            aux.select();
+            <!-- Video 2 -->
 
-            // Copy the highlighted text
-            document.execCommand("copy");
+            <div class="video1" id="video2">
+                <video controls id="my-video" class="video-js vjs-big-play-centered" preload="auto" data-setup="{}">
+                    <source src="https://mayankvikash.github.io/M-SHORTS-VIDEO/Doraeemonn.mp4" type="video/mp4">
+                </video>
+                <div class="video-desc">
+                    <p class="trend">Trending #2</p>
+                    <p><b>Doraeemonn</b> </p>
+                    Provided to M SHORTS by <b>[Dtbse_Err]</b>
+                    <!-- <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="veri-mark"> -->
+                    <br> About the video: <b>[Dtbse_Err] </b>
+                    <br> Subtitles/Captions by <b>[Dtbse_Err]</b>
+                    <br> Video Type: <b>[Dtbse_Err]</b>
+                    <br> Video Language: <b>[Dtbse_Err]</b>
+                    <br> Licensed to M SHORTS by <b>[Dtbse_Err]</b>
 
-            // Remove it from the body
-            document.body.removeChild(aux);
+                    <br> Provider's Comment
+                    <br> <b>[Dtbse_Err]</b> <br>
+                    <br> Comment
+                    <p class="comment-name"> <b> M SHORTS </b> <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="cmnt-mark"></p>
+                    <p>That "Doraemon" was so cute.</p>
 
-            window.alert('Link Copied');
 
-        }
-    </script>
-<script>
-        var load = document.getElementById("loader");
-        window.addEventListener("load", function() {
-            load.style.display = "none";
-        })
-    </script>
+
+                    <br> <br>
+
+                    <div class="ad-banner">
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key': '57a25cac5277959b6e2e4de63d5a68a1',
+                                'format': 'iframe',
+                                'height': 250,
+                                'width': 300,
+                                'params': {}
+                            };
+                            document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectiveperformanceformat.com/57a25cac5277959b6e2e4de63d5a68a1/invoke.js"></scr' + 'ipt>');
+                        </script>
+                        Advertisement
+
+                    </div>
+
+                </div>
+            </div>
+            <br> <br>
+
+
+            <!-- video 2  -->
+
+            <!-- video 3 -->
+            <div class="video1" id="video3">
+                <video controls id="my-video" class="video-js vjs-big-play-centered" preload="auto" data-setup="{}">
+                    <source src="https://mayankvikash.github.io/M-SHORTS-VIDEO/IBanana.mp4" type="video/mp4">
+                </video>
+                <div class="video-desc">
+                    <p class="trend">Trending #3</p>
+                    <p><b>I Pencil Ultra Pro Max x 100</b> </p>
+                    Provided to M SHORTS by <b>[Dtbse_Err]</b>
+                    <!-- <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="veri-mark"> -->
+                    <br> About the video: <b>[Dtbse_Err] </b>
+                    <br> Subtitles/Captions by <b>[Dtbse_Err]</b>
+                    <br> Video Type: <b>[Dtbse_Err]</b>
+                    <br> Video Language: <b>[Dtbse_Err]</b>
+                    <br> Licensed to M SHORTS by <b>[Dtbse_Err]</b>
+
+                    <br> Provider's Comment
+                    <br> <b>[Dtbse_Err]</b> <br>
+                    <br> Comment
+                    <p class="comment-name"> <b> M SHORTS </b> <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="cmnt-mark"></p>
+                    <p>Thanks Apple for this 2000 dollars IBanana</p>
+
+
+
+                    <br> <br>
+
+                    <div class="ad-banner">
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key': '57a25cac5277959b6e2e4de63d5a68a1',
+                                'format': 'iframe',
+                                'height': 250,
+                                'width': 300,
+                                'params': {}
+                            };
+                            document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectiveperformanceformat.com/57a25cac5277959b6e2e4de63d5a68a1/invoke.js"></scr' + 'ipt>');
+                        </script>
+                        Advertisement
+
+                    </div>
+
+                </div>
+            </div>
+            <br> <br>
+            <!-- video 3 -->
+
+            <!-- video 4  -->
+            <div class="video1" id="video4">
+                <video controls id="my-video" class="video-js vjs-big-play-centered" preload="auto" data-setup="{}">
+                    <source src="https://mayankvikash.github.io/M-SHORTS-VIDEO/Sasta_Dynamite-MSHORTS.mp4" type="video/mp4">
+                </video>
+                <div class="video-desc">
+                    <!-- <p class="trend">Trending #1</p> -->
+                    <p><b>Indian version of Dynamite</b> </p>
+                    Provided to M SHORTS by <b>[Dtbse_Err]</b>
+                    <!-- <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="veri-mark"> -->
+                    <br> About the video: <b>[Dtbse_Err] </b>
+                    <br> Subtitles/Captions by <b>[Dtbse_Err]</b>
+                    <br> Video Type: <b>[Dtbse_Err]</b>
+                    <br> Video Language: <b>[Dtbse_Err]</b>
+                    <br> Licensed to M SHORTS by <b>[Dtbse_Err]</b>
+
+                    <br> Provider's Comment
+                    <br> <b>[Dtbse_Err]</b> <br>
+                    <br> Comment
+                    <p class="comment-name"> <b> M SHORTS </b> <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="cmnt-mark"></p>
+                    <p>Ahh! My ears.</p>
+
+
+
+                    <br> <br>
+
+                    <div class="ad-banner">
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key': '57a25cac5277959b6e2e4de63d5a68a1',
+                                'format': 'iframe',
+                                'height': 250,
+                                'width': 300,
+                                'params': {}
+                            };
+                            document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectiveperformanceformat.com/57a25cac5277959b6e2e4de63d5a68a1/invoke.js"></scr' + 'ipt>');
+                        </script>
+                        Advertisement
+
+                    </div>
+
+                </div>
+            </div>
+            <br> <br>
+
+            <!-- video 5 -->
+            <div class="video1" id="video5">
+                <video controls id="my-video" class="video-js vjs-big-play-centered" preload="auto" data-setup="{}">
+                    <source src="https://mayankvikash.github.io/M-SHORTS-VIDEO/Swimming_Party.mp4" type="video/mp4">
+                </video>
+                <div class="video-desc">
+                    <!-- <p class="trend">Trending #1</p> -->
+                    <p><b>Swimming Party</b> </p>
+                    Provided to M SHORTS by <b>[Dtbse_Err]</b>
+                    <!-- <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="veri-mark"> -->
+                    <br> About the video: <b>[Dtbse_Err] </b>
+                    <br> Subtitles/Captions by <b>[Dtbse_Err]</b>
+                    <br> Video Type: <b>[Dtbse_Err]</b>
+                    <br> Video Language: <b>[Dtbse_Err]</b>
+                    <br> Licensed to M SHORTS by <b>[Dtbse_Err]</b>
+
+                    <br> Provider's Comment
+                    <br><b>[Dtbse_Err]</b> <br>
+                    <br> Comment
+                    <p class="comment-name"> <b> M SHORTS </b> <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="cmnt-mark"></p>
+                    <p>They are having such a great time.</p>
+
+
+
+                    <br> <br>
+
+                    <div class="ad-banner">
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key': '57a25cac5277959b6e2e4de63d5a68a1',
+                                'format': 'iframe',
+                                'height': 250,
+                                'width': 300,
+                                'params': {}
+                            };
+                            document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectiveperformanceformat.com/57a25cac5277959b6e2e4de63d5a68a1/invoke.js"></scr' + 'ipt>');
+                        </script>
+                        Advertisement
+
+                    </div>
+
+                </div>
+            </div>
+            <br> <br>
+
+            <!-- video 6  -->
+            <div class="video1" id="video6">
+                <video controls id="my-video" class="video-js vjs-big-play-centered" preload="auto" data-setup="{}">
+                    <source src="https://mayankvikash.github.io/M-SHORTS-VIDEO/Short_Video_Diss-MSHORTS.mp4" type="video/mp4">
+                </video>
+                <div class="video-desc">
+                    <!-- <p class="trend">Trending #1</p> -->
+                    <p><b>RIP SHORTS</b> </p>
+                    Provided to M SHORTS by <b>[Dtbse_Err]</b>
+                    <!-- <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="veri-mark"> -->
+                    <br> About the video: <b>[Dtbse_Err] </b>
+                    <br> Subtitles/Captions by <b>[Dtbse_Err]</b>
+                    <br> Video Type: <b>[Dtbse_Err]</b>
+                    <br> Video Language: <b>[Dtbse_Err]</b>
+                    <br> Licensed to M SHORTS by <b>[Dtbse_Err]</b>
+
+                    <br> Provider's Comment
+                    <br> <b>[Dtbse_Err]</b> <br>
+                    <br> Comment
+                    <p class="comment-name"> <b> M SHORTS </b> <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="cmnt-mark"></p>
+                    <p>Wait! What is this video doing here?</p>
+
+
+
+                    <br> <br>
+
+                    <div class="ad-banner">
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key': '57a25cac5277959b6e2e4de63d5a68a1',
+                                'format': 'iframe',
+                                'height': 250,
+                                'width': 300,
+                                'params': {}
+                            };
+                            document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectiveperformanceformat.com/57a25cac5277959b6e2e4de63d5a68a1/invoke.js"></scr' + 'ipt>');
+                        </script>
+                        Advertisement
+
+                    </div>
+
+                </div>
+            </div>
+            <br> <br>
+
+            <!-- video 7  -->
+            <div class="video1" id="video7">
+                <video controls id="my-video" class="video-js vjs-big-play-centered" preload="auto" data-setup="{}">
+                    <source src="https://mayankvikash.github.io/M-SHORTS-VIDEO/PainX100.mp4" type="video/mp4">
+                </video>
+                <div class="video-desc">
+                    <!-- <p class="trend">Trending #1</p> -->
+                    <p><b>Pain</b> </p>
+                    Provided to M SHORTS by <b>[Dtbse_Err]</b>
+                    <!-- <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="veri-mark"> -->
+                    <br> About the video: <b>[Dtbse_Err] </b>
+                    <br> Subtitles/Captions by <b>[Dtbse_Err]</b>
+                    <br> Video Type: <b>[Dtbse_Err]</b>
+                    <br> Video Language: <b>[Dtbse_Err]</b>
+                    <br> Licensed to M SHORTS by <b>[Dtbse_Err]</b>
+
+                    <br> Provider's Comment
+                    <br><b>[Dtbse_Err]</b> <br>
+                    <!-- <br> Comment
+                    <p class="comment-name"> <b> M SHORTS </b> <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="cmnt-mark"></p>
+                    <p></p> -->
+
+
+
+                    <br> <br>
+
+                    <div class="ad-banner">
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key': '57a25cac5277959b6e2e4de63d5a68a1',
+                                'format': 'iframe',
+                                'height': 250,
+                                'width': 300,
+                                'params': {}
+                            };
+                            document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectiveperformanceformat.com/57a25cac5277959b6e2e4de63d5a68a1/invoke.js"></scr' + 'ipt>');
+                        </script>
+                        Advertisement
+
+                    </div>
+
+                </div>
+            </div>
+            <br> <br>
+
+            <!-- video 8  -->
+            <div class="video1" id="video8">
+                <video controls id="my-video" class="video-js vjs-big-play-centered" preload="auto" data-setup="{}">
+                    <source src="https://mayankvikash.github.io/M-SHORTS-VIDEO/Best_Teacher.mp4" type="video/mp4">
+                </video>
+                <div class="video-desc">
+                    <!-- <p class="trend">Trending #1</p> -->
+                    <p><b>She wanted to say May be</b> </p>
+                    Provided to M SHORTS by <b>[Dtbse_Err]</b>
+                    <!-- <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="veri-mark"> -->
+                    <br> About the video: <b>[Dtbse_Err] </b>
+                    <br> Subtitles/Captions by <b>[Dtbse_Err]</b>
+                    <br> Video Type: <b>[Dtbse_Err]</b>
+                    <br> Video Language: <b>[Dtbse_Err]</b>
+                    <br> Licensed to M SHORTS by <b>[Dtbse_Err]</b>
+
+                    <br> Provider's Comment
+                    <br> <b>[Dtbse_Err]</b> <br>
+                    <br> Comment
+                    <p class="comment-name"> <b> M SHORTS </b> <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="cmnt-mark"></p>
+                    <p>And the award for best teacher goes to:</p>
+
+
+                    <br> <br>
+
+                    <div class="ad-banner">
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key': '57a25cac5277959b6e2e4de63d5a68a1',
+                                'format': 'iframe',
+                                'height': 250,
+                                'width': 300,
+                                'params': {}
+                            };
+                            document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectiveperformanceformat.com/57a25cac5277959b6e2e4de63d5a68a1/invoke.js"></scr' + 'ipt>');
+                        </script>
+                        Advertisement
+
+                    </div>
+
+                </div>
+            </div>
+            <br> <br>
+            <!-- video 8 -->
+            <div class="video1" id="video9">
+                <video controls id="my-video" class="video-js vjs-big-play-centered" preload="auto" data-setup="{}">
+                    <source src="https://mayankvikash.github.io/M-SHORTS-VIDEO/RIP_TikTokers-MSHORTS.mp4" type="video/mp4">
+                </video>
+                <div class="video-desc">
+                    <!-- <p class="trend">Trending #1</p> -->
+                    <p><b>RIP in advance</b> </p>
+                    Provided to M SHORTS by <b>Mayank Vikash</b>
+                    <!-- <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="veri-mark"> -->
+                    <br> About the video: <b>[Dtbse_Err]</b>
+                    <br> Subtitles/Captions by <b>[Dtbse_Err]</b>
+                    <br> Video Type: <b>[Dtbse_Err]</b>
+                    <br> Video Language: <b>[Dtbse_Err]</b>
+                    <br> Licensed to M SHORTS by <b>[Dtbse_Err]</b>
+
+                    <br> Provider's Comment
+                    <br> <b>[Dtbse_Err]</b> <br>
+                    <br> Comment
+                    <p class="comment-name"> <b> M SHORTS </b> <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="cmnt-mark"></p>
+                    <p>According to secret sources, these people are still trying to get back TikTok</p>
+
+                    <br> <br>
+
+                    <div class="ad-banner">
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key': '57a25cac5277959b6e2e4de63d5a68a1',
+                                'format': 'iframe',
+                                'height': 250,
+                                'width': 300,
+                                'params': {}
+                            };
+                            document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectiveperformanceformat.com/57a25cac5277959b6e2e4de63d5a68a1/invoke.js"></scr' + 'ipt>');
+                        </script>
+                        Advertisement
+
+                    </div>
+
+                </div>
+            </div>
+            <br> <br>
+            <!-- video 9 -->
+            <div class="video1" id="video10">
+                <video controls id="my-video" class="video-js vjs-big-play-centered" preload="auto" data-setup="{}">
+                    <source src="https://mayankvikash.github.io/M-SHORTS-VIDEO/Playerrr.mp4
+                    " type="video/mp4">
+                </video>
+                <div class="video-desc">
+                    <!-- <p class="trend">Trending #1</p> -->
+                    <p><b>Playerrr</b> </p>
+                    Provided to M SHORTS by <b>[Dtbse_Err]</b>
+                    <!-- <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="veri-mark"> -->
+                    <br> About the video: <b>[Dtbse_Err] </b>
+                    <br> Subtitles/Captions by <b>[Dtbse_Err]</b>
+                    <br> Video Type: <b>[Dtbse_Err]</b>
+                    <br> Video Language: <b>[Dtbse_Err]</b>
+                    <br> Licensed to M SHORTS by <b>[Dtbse_Err]</b>
+
+                    <br> Provider's Comment
+                    <br> <b>[Dtbse_Err]</b> <br>
+                    <!-- <br> Comment
+                    <p class="comment-name"> <b> Name </b> <img src="https://m-shorts.mayankvikash.ml/verification-mark.png" class="cmnt-mark"></p>
+                    <p></p> -->
+
+
+
+
+                    <br> <br>
+
+                    <div class="ad-banner">
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key': '57a25cac5277959b6e2e4de63d5a68a1',
+                                'format': 'iframe',
+                                'height': 250,
+                                'width': 300,
+                                'params': {}
+                            };
+                            document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectiveperformanceformat.com/57a25cac5277959b6e2e4de63d5a68a1/invoke.js"></scr' + 'ipt>');
+                        </script>
+                        Advertisement
+
+                    </div>
+
+                </div>
+            </div>
+            <br> <br>
+            <!-- public comment -->
+            <div id="HCB_comment_box"></div>
+            <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+            <script type="text/javascript" id="hcb">
+                /*<!--*/
+                if (!window.hcb_user) {
+                    hcb_user = {};
+                }(function() {
+                    var s = document.createElement("script"),
+                        l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"),
+                        h = "https://www.htmlcommentbox.com";
+                    s.setAttribute("type", "text/javascript");
+                    s.setAttribute("src", h + "/jread?page=" + encodeURIComponent(l).replace("+", "%2B") + "&mod=%241%24wq1rdBcg%24k%2FXujLBKvowlMHLypOdTn1" + "&opts=16798&num=10&ts=1635094693990");
+                    if (typeof s != "undefined") document.getElementsByTagName("head")[0].appendChild(s);
+                })(); /*-->*/
+            </script>
+
+            <!-- pub-ends -->
+
+            <br> <br>
+
+            <br>
+            <!-- video 10 ends -->
+            <div class="ad-native">
+                <script async="async" data-cfasync="false" src="//pl16565405.trustedgatetocontent.com/03bf267db9888b115daf14fec4ff254e/invoke.js"></script>
+                <div id="container-03bf267db9888b115daf14fec4ff254e"></div>
+            </div>
+
+            <br> <br>
+
+            <p>
+                <h1>Submit Your Videos</h1> <br> Due to techical issues, it is not possible to upload videos for submission, kindly send a YouTube link of your video to support@mayankvikash.ml
+                <br> Sorry for the inconvenience :)
+                <br> <br>
+                <h1>Video Guidelines</h1>
+                <br>
+                <p> Make sure your video has something that people will watch.
+                    <br> M SHORTS believe in quality content so only those videos are allowed here which have something unique. </p>
+                Made with love in INDIA.
+                <br>©2021 Mayank Vikash
+            </p>
+
+
+
+        </div>
+    </div>
+
+    <!-- VideoJS  -->
+    <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
+
+
+
+
+
+
+
+
 
 </body>
+
 </html>
